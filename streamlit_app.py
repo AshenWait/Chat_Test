@@ -32,8 +32,8 @@ def get_ai_response(prompt, model):
     """
     # 创建客户端
     client = OpenAI(
-        api_key=os.getenv("CODINGPLAN_API_KEY"),
-        base_url=os.getenv("CODINGPLAN_BASE_URL")
+        api_key=st.secrets["CODINGPLAN_API_KEY"],
+        base_url=st.secrets["CODINGPLAN_BASE_URL"]
     )
     # 调用 API
     response = client.chat.completions.create(
